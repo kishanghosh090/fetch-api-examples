@@ -1,6 +1,21 @@
 // https://cat-fact.herokuapp.com/facts our api
 
-const URL = "https://cat-fact.herokuapp.com/facts";
+let loading = document.querySelector("#loading");
+
+function myFun() {
+     loading.style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+const URL = "https://cat-fact.herokuapp.com/facts";//api url
 const factPara = document.querySelector(".factPara");
 const btn = document.querySelector(".btn")
 
@@ -13,7 +28,7 @@ const btn = document.querySelector(".btn")
 //      factPara.innerText = catFact[1].text
 // };
 // getfacts();
-
+//promise chaining in java script
 function getFacts() {
     fetch(URL).then((rseponse) => {
      return rseponse.json();
@@ -22,4 +37,4 @@ function getFacts() {
         factPara.innerText = data[1].text
     });
 }
-btn.addEventListener("click", getFacts)
+btn.addEventListener("click", getFacts);
